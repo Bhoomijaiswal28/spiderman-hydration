@@ -1,0 +1,39 @@
+{
+  "name": "spiderman-hydration",
+  "private": true,
+  "version": "0.0.0",
+  "main": "main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && electron-builder",
+    "electron": "electron main.cjs"
+  },
+  "build": {
+    "appId": "com.spiderman.hydration",
+    "productName": "Spider-Man Hydration",
+    "files": [
+      "dist/**/*",
+      "main.cjs",
+      "preload.js"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "concurrently": "^10.0.5",
+    "cross-env": "^10.1.0",
+    "electron": "^44.2.0",
+    "electron-builder": "^26.15.3"
+  }
+}

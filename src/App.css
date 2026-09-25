@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: transparent;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Card Themes */
+.main-card {
+  width: 380px;
+  background: #252b36;
+  border: 2px solid #d93829;
+  border-radius: 12px;
+  padding: 16px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.main-card.theme-classic { border-color: #d93829; }
+.main-card.theme-miles { border-color: #f59e0b; background: #1e1b18; }
+.main-card.theme-venom { border-color: #10b981; background: #111827; }
+
+/* Titlebar & Drag area */
+.titlebar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  -webkit-app-region: drag;
+}
+
+/* Colored Dots Theme Buttons */
+.mac-dots {
+  display: flex;
+  gap: 8px;
+  -webkit-app-region: no-drag !important;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0.7;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.dot-red { background-color: #ff5f56; }
+.dot-yellow { background-color: #ffbd2e; }
+.dot-green { background-color: #27c93f; }
+
+/* Window Controls */
+.window-controls {
+  display: flex;
+  gap: 6px;
+  -webkit-app-region: no-drag !important;
+}
+
+.win-btn {
+  background: transparent;
+  border: none;
+  color: #a0aab8;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  -webkit-app-region: no-drag !important;
+}
+
+.win-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.close-btn:hover {
+  background: #ff4d4d;
+  color: #ffffff;
+}
+
+/* Header Text */
+.spidey-title {
+  color: #e63929;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+.spidey-subtitle {
+  color: #d1d5db;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+/* Hero Image Frame */
+.hero-frame {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e63929;
+  margin-bottom: 16px;
+  background: #111;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Start Reminder Button */
+.start-reminder-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #d93829;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  -webkit-app-region: no-drag !important;
+}
+
+.start-reminder-btn:hover {
+  background: #b82b1e;
+}
+
+/* Interval Dropdown */
+.interval-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: #e5e7eb;
+}
+
+.interval-dropdown {
+  background: #1f242d;
+  color: #ffffff;
+  border: 1px solid #4b5563;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  -webkit-app-region: no-drag !important;
+}
+
+/* Striped Active Banner */
+.reminder-banner {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: repeating-linear-gradient(
+    45deg,
+    #d93829,
+    #d93829 12px,
+    #b82b1e 12px,
+    #b82b1e 24px
+  );
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+/* Counter Text */
+.counter-text {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #e5e7eb;
+}
+
+.counter-text span {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* Action Buttons */
+.btn-row {
+  display: flex;
+  gap: 12px;
+}
+
+.add-glass-btn, .reset-glass-btn {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  -webkit-app-region: no-drag !important;
+}
+
+.add-glass-btn { background: #0088cc; color: #ffffff; }
+.add-glass-btn:hover { background: #0077b3; }
+
+.reset-glass-btn { background: #4b5563; color: #ffffff; }
+.reset-glass-btn:hover { background: #374151; }
